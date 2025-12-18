@@ -156,7 +156,7 @@ export default function Home() {
               Lydia Studio
             </p>
             <p className="text-xs text-muted">
-              Building calm tools, slowly.
+              Building calm tools, thoughtfully.
             </p>
           </div>
           <div className="flex gap-6">
