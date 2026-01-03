@@ -246,12 +246,14 @@ export default function Home() {
 
           <div className="flex gap-6">
             <a
-              href="mailto:lydia@stud.io"
+              href="https://tally.so/r/Y50Qb5"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group text-sm text-muted hover:text-matcha-700 transition-all duration-300 focus:outline-none
                          relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-matcha-500
                          after:transition-all after:duration-300 hover:after:w-full focus:after:w-full"
             >
-              Email
+              Contact
             </a>
             <a
               href="https://github.com/lydiacodesdaily/"
