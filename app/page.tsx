@@ -1,29 +1,54 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-hidden">
+      {/* Animated background elements */}
+      <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-matcha-200/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-40 left-10 w-80 h-80 bg-matcha-300/15 rounded-full blur-3xl animate-float-delayed" />
+      </div>
+
       {/* Hero Section with Visual Anchor */}
       <section className="relative max-w-3xl mx-auto px-6 pt-20 pb-16 md:pt-32 md:pb-24">
-        {/* Subtle matcha-tinted panel behind hero */}
-        <div className="absolute inset-0 -mx-6 bg-matcha-tint/30 rounded-3xl blur-3xl -z-10" />
+        {/* Enhanced glassmorphic background */}
+        <div className="absolute inset-0 -mx-6 bg-gradient-to-br from-matcha-tint/40 via-matcha-tint/30 to-transparent rounded-3xl blur-2xl -z-10
+                        animate-subtle-pulse" />
 
-        <h1 className="text-4xl md:text-5xl font-light text-nearBlack mb-3 text-balance">
-          Lydia Studio
-        </h1>
-        <p className="text-xl md:text-2xl text-muted mb-2 font-light text-balance">
-          Gentle tools for focus, time awareness, and learning.
-        </p>
-        <p className="text-sm text-muted mb-4">
-          For days when structure helps — but pressure doesn't.
-        </p>
-        <div className="flex items-center gap-2">
-          {/* Small avatar */}
-          <div className="w-5 h-5 rounded-full bg-matcha-accent/20 border border-matcha-accent/30 flex items-center justify-center overflow-hidden">
-            {/* Placeholder - replace with actual image */}
-            <div className="w-full h-full bg-gradient-to-br from-matcha-accent/30 to-matcha-accent/10" />
-          </div>
-          <p className="text-xs text-muted">
-            Built by Lydia
+        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className="text-5xl md:text-7xl font-light text-nearBlack mb-4 text-balance
+                         bg-gradient-to-br from-nearBlack via-matcha-800 to-matcha-700 bg-clip-text text-transparent
+                         leading-tight tracking-tight">
+            Lydia Studio
+          </h1>
+          <p className="text-xl md:text-3xl text-muted mb-3 font-light text-balance leading-relaxed">
+            Gentle tools for focus, time awareness, and learning.
           </p>
+          <p className="text-base md:text-lg text-muted/80 mb-6 max-w-xl">
+            For days when structure helps — but pressure doesn't.
+          </p>
+
+          {/* Enhanced avatar with animation */}
+          <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2
+                          border border-matcha-accent/20 shadow-sm hover:shadow-md hover:border-matcha-accent/40
+                          transition-all duration-300 group cursor-default">
+            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-matcha-400 to-matcha-600
+                            flex items-center justify-center overflow-hidden shadow-inner
+                            group-hover:scale-110 transition-transform duration-300">
+              <div className="w-full h-full bg-gradient-to-br from-matcha-accent/40 to-matcha-accent/20" />
+            </div>
+            <p className="text-sm text-nearBlack/80 font-medium">
+              Built by Lydia
+            </p>
+          </div>
         </div>
       </section>
 
@@ -160,6 +185,12 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-6">
+            <a
+              href="mailto:lydia@stud.io"
+              className="text-sm text-muted hover:text-matcha-accent transition-colors focus:outline-none focus:underline"
+            >
+              Email
+            </a>
             <a
               href="https://github.com/lydiacodesdaily/"
               target="_blank"
