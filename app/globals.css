@@ -3,9 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply text-nearBlack;
+    @apply text-nearBlack font-sans antialiased;
     background-color: #FAF7F1;
+  }
+
+  ::selection {
+    @apply bg-matcha-200 text-nearBlack;
+  }
+}
+
+@layer components {
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr min(720px, 100%) 1fr;
+    padding-inline: 1.5rem;
+  }
+
+  .editorial-grid > * {
+    grid-column: 2;
+  }
+
+  .editorial-grid > .full-bleed {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .editorial-grid > .breakout {
+    grid-column: 1 / -1;
+    width: min(1100px, 100%);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
   }
 }
 
@@ -14,43 +46,29 @@
     text-wrap: balance;
   }
 
-  /* Floating animations */
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
+  /* Subtle reveal animation */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    50% {
-      transform: translateY(-20px) translateX(10px);
-    }
-  }
-
-  @keyframes float-delayed {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    50% {
-      transform: translateY(20px) translateX(-10px);
-    }
-  }
-
-  @keyframes subtle-pulse {
-    0%, 100% {
-      opacity: 0.8;
-    }
-    50% {
+    to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  .animate-float {
-    animation: float 20s ease-in-out infinite;
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
   }
 
-  .animate-float-delayed {
-    animation: float-delayed 25s ease-in-out infinite;
-  }
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
 
-  .animate-subtle-pulse {
-    animation: subtle-pulse 8s ease-in-out infinite;
+  /* Horizontal rule styling */
+  .editorial-hr {
+    @apply w-12 h-px bg-matcha-accent/40 my-8;
   }
 }
