@@ -209,7 +209,7 @@ export default function Home() {
           </p>
           <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
                          group-hover:gap-2 transition-all duration-300">
-            Get extension <span>→</span>
+            {/* Get extension <span>→</span> */}
           </span>
         </a>
 
