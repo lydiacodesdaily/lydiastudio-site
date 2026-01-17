@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -245,8 +246,13 @@ export default function Home() {
         </a>
       </div>
 
+      {/* Newsletter */}
+      <div className={`opacity-0 ${isVisible ? 'animate-fade-up animate-delay-400' : ''}`}>
+        <NewsletterForm />
+      </div>
+
       {/* Footer */}
-      <footer className="pt-20 md:pt-30 pb-8 border-t border-cream-300 mt-16">
+      <footer className="pt-12 md:pt-16 pb-8 border-t border-cream-300">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
             <p className="text-body-lg font-serif text-nearBlack mb-1">
