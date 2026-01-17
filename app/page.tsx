@@ -205,7 +205,7 @@ export default function Home() {
             Chrome extension embedding time-aware audio cues and reusable task lists into live Flow Club sessions.
           </p>
           <p className="text-caption text-stone italic mb-4">
-            50+ active users, featured by Flow Club
+            60+ active users, featured by Flow Club
           </p>
           <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
                          group-hover:gap-2 transition-all duration-300">

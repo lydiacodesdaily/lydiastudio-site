@@ -38,7 +38,7 @@ export default function NewsletterForm() {
     <section className="py-16 md:py-20">
       <div className="max-w-md">
         <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-4">
-          Stay in touch
+          Newsletter
         </p>
         <h2 className="text-headline font-serif text-nearBlack mb-3">
           Get occasional notes
