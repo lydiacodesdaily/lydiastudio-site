@@ -132,10 +132,10 @@ export default function Home() {
               JustToday
             </h3>
             <p className="text-body-lg text-muted mb-3">
-              An energy-aware daily planning system built around a "release then check once" workflow that reduces task fixation and guilt.
+              A calm, energy-aware planning app that helps you decide what matters today, and let the rest wait.
             </p>
             <p className="text-body text-stone mb-6">
-              Adapt your day based on Low / Steady / Flow energy, encouraging progress without streaks, rigid schedules, or constant self-monitoring.
+              JustToday combines a gentle brain dump, a small “Today” focus area, flexible routines, and a quiet “Later” space so you can move through your day without pressure, streaks, or constant reminders. It adapts to your energy level and encourages progress that feels supportive, even on low-energy days.
             </p>
             <span className="inline-flex items-center gap-2 text-body text-matcha-accent font-medium
                            group-hover:gap-3 transition-all duration-300">
