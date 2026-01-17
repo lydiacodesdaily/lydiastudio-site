@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import NewsletterForm from '@/components/NewsletterForm';
+import FloatingLeaves from '@/components/FloatingLeaves';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +15,8 @@ export default function Home() {
   return (
     <main className="editorial-grid min-h-screen pb-20">
       {/* Hero Section */}
-      <header className={`pt-20 md:pt-32 pb-16 md:pb-24 opacity-0 ${isVisible ? 'animate-fade-up' : ''}`}>
+      <header className={`relative pt-20 md:pt-32 pb-16 md:pb-24 opacity-0 ${isVisible ? 'animate-fade-up' : ''}`}>
+        <FloatingLeaves />
         <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-6">
           Lydia Studio
         </p>
