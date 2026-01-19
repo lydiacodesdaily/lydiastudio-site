@@ -248,6 +248,24 @@ export default function Home() {
         </a>
       </div>
 
+      {/* Testimonials */}
+      <section className="py-12 md:py-16">
+        <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-8">
+          Kind Words
+        </p>
+        <blockquote className="bg-white/60 rounded-lg border border-cream-300 p-6 md:p-8">
+          <p className="text-body-lg font-serif text-nearBlack leading-relaxed mb-4">
+            "Thank you so much for developing these tools. They are truly supportive and provide a much needed reminder to let up on the gas pedal instead of crushing it harder when things don't seem to be working."
+          </p>
+          <footer className="flex items-center gap-3">
+            <div className="editorial-hr flex-1 mt-0 mb-0" />
+            <cite className="text-caption text-stone not-italic">
+              Christine, Flow Club
+            </cite>
+          </footer>
+        </blockquote>
+      </section>
+
       {/* Newsletter */}
       <div className={`opacity-0 ${isVisible ? 'animate-fade-up animate-delay-400' : ''}`}>
         <NewsletterForm />
