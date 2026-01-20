@@ -185,16 +185,14 @@ export default function Home() {
 
         {/* Flow Club Companion */}
         <a
-          href="https://chromewebstore.google.com/detail/flow-club-companion-focus/ncjcggjgiajhmeifohinbeeeegdiaehc"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/flow-club-companion"
           className="group block p-6 bg-white/60 rounded-lg border border-cream-300
                      hover:border-matcha-accent/30 hover:bg-white transition-all duration-300"
         >
           <div className="relative aspect-[4/3] bg-cream-100 rounded overflow-hidden mb-5 border border-cream-200">
             <Image
               src="/screenshots/flowclub-companion.png"
-              alt="Flow Club Companion Chrome extension interface"
+              alt="Flow Club Companion browser extension interface"
               fill
               className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 33vw"
@@ -204,14 +202,14 @@ export default function Home() {
             Flow Club Companion
           </h3>
           <p className="text-caption text-muted mb-3 line-clamp-3">
-            Chrome extension embedding time-aware audio cues and reusable task lists into live Flow Club sessions.
+            Browser extension for Chrome and Firefox that adds time-aware audio cues and reusable task lists to Flow Club sessions.
           </p>
           <p className="text-caption text-stone italic mb-4">
-            60+ active users, featured by Flow Club
+            Featured by Flow Club
           </p>
           <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
                          group-hover:gap-2 transition-all duration-300">
-            {/* Get extension <span>→</span> */}
+            Getting started <span>→</span>
           </span>
         </a>
 

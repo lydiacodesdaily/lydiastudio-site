@@ -40,9 +40,7 @@ export default function FlowClubCompanion() {
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-matcha-accent text-white text-sm flex items-center justify-center">1</span>
               <span>
                 <a
-                  href="https://chromewebstore.google.com/detail/flow-club-companion-focus/ncjcggjgiajhmeifohinbeeeegdiaehc"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#install"
                   className="text-matcha-accent hover:underline font-medium"
                 >
                   Install the extension
@@ -119,16 +117,16 @@ export default function FlowClubCompanion() {
       {/* Install Section */}
       <section id="install" className="py-8">
         <h2 className="text-headline font-serif text-nearBlack mb-6">Install the Extension</h2>
+        <p className="text-caption text-stone mb-4">Latest version: <strong className="text-nearBlack">v1.1.5</strong></p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="https://chromewebstore.google.com/detail/flow-club-companion-focus/ncjcggjgiajhmeifohinbeeeegdiaehc"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/flow-club-chrome_v1.1.5.zip"
+            download
             className="inline-flex items-center gap-2 px-5 py-3 bg-matcha-accent text-white rounded-lg
                        hover:bg-matcha-700 transition-colors duration-200"
           >
-            Get for Chrome
-            <span>→</span>
+            Get for Chrome (Direct Download)
+            <span>↓</span>
           </a>
           <a
             href="https://addons.mozilla.org/en-US/firefox/addon/flow-club-companion/"
@@ -137,10 +135,13 @@ export default function FlowClubCompanion() {
             className="inline-flex items-center gap-2 px-5 py-3 border border-cream-300 text-nearBlack rounded-lg
                        hover:border-matcha-accent/30 hover:bg-white transition-all duration-200"
           >
-            Get for Firefox
+            Get for Firefox (Under Review)
             <span>→</span>
           </a>
         </div>
+        <p className="text-caption text-stone mt-4">
+          Chrome: The extension is temporarily unavailable on the Chrome Web Store while we await review. Download the ZIP and load it manually via <code className="bg-cream-200 px-1.5 py-0.5 rounded text-xs">chrome://extensions</code> → Enable Developer Mode → Load unpacked.
+        </p>
       </section>
 
       {/* First Session - Condensed steps 2-4 */}
@@ -379,14 +380,13 @@ export default function FlowClubCompanion() {
         <h2 className="text-headline font-serif text-nearBlack mb-6">Ready to get started?</h2>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="https://chromewebstore.google.com/detail/flow-club-companion-focus/ncjcggjgiajhmeifohinbeeeegdiaehc"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/flow-club-chrome_v1.1.5.zip"
+            download
             className="inline-flex items-center gap-2 px-6 py-3 bg-matcha-accent text-white rounded-lg
                        hover:bg-matcha-700 transition-colors duration-200"
           >
-            Get for Chrome
-            <span>→</span>
+            Get for Chrome v1.1.5
+            <span>↓</span>
           </a>
           <a
             href="https://addons.mozilla.org/en-US/firefox/addon/flow-club-companion/"
@@ -395,10 +395,13 @@ export default function FlowClubCompanion() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-cream-300 text-nearBlack rounded-lg
                        hover:border-matcha-accent/30 hover:bg-white transition-all duration-200"
           >
-            Get for Firefox
+            Get for Firefox (Under Review)
             <span>→</span>
           </a>
         </div>
+        <p className="text-caption text-stone mt-4">
+          Chrome users: Load the ZIP manually via chrome://extensions → Developer Mode → Load unpacked
+        </p>
       </section>
 
       {/* Footer */}
