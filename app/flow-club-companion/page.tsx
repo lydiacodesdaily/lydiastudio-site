@@ -408,11 +408,11 @@ export default function FlowClubCompanion() {
                        hover:border-matcha-accent/30 hover:bg-white transition-all duration-200"
           >
             Get for Firefox
-            <span>→</span>Download the ZIP, unzip it, then load the folder via chrome://extensions → Developer Mode → Load unpacked → select the unzipped folder.
+            <span>→</span>
           </a>
         </div>
         <p className="text-caption text-stone mt-4">
-          Chrome users: Load the ZIP manually via chrome://extensions → Developer Mode → Load unpacked
+          Chrome users: Download the ZIP, unzip it, then load the folder via chrome://extensions → Developer Mode → Load unpacked → select the unzipped folder.
         </p>
       </section>
 
