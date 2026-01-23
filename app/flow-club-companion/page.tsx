@@ -135,12 +135,12 @@ export default function FlowClubCompanion() {
             className="inline-flex items-center gap-2 px-5 py-3 border border-cream-300 text-nearBlack rounded-lg
                        hover:border-matcha-accent/30 hover:bg-white transition-all duration-200"
           >
-            Get for Firefox (Under Review)
+            Get for Firefox
             <span>→</span>
           </a>
         </div>
         <p className="text-caption text-stone mt-4">
-          Chrome: The extension is temporarily unavailable on the Chrome Web Store while we await review. Download the ZIP and load it manually via <code className="bg-cream-200 px-1.5 py-0.5 rounded text-xs">chrome://extensions</code> → Enable Developer Mode → Load unpacked.
+          Chrome: The extension is temporarily unavailable on the Chrome Web Store while we await review. Download the ZIP, unzip it, then load the folder via <code className="bg-cream-200 px-1.5 py-0.5 rounded text-xs">chrome://extensions</code> → Enable Developer Mode → Load unpacked → select the unzipped folder.
         </p>
       </section>
 
@@ -154,6 +154,18 @@ export default function FlowClubCompanion() {
               1
             </div>
             <div>
+              <p className="text-body-lg font-serif text-nearBlack mb-2">Pin the extension</p>
+              <p className="text-body text-muted">
+                Click the puzzle icon in your browser toolbar → find Flow Club Companion → click the pin so it stays visible. Then click the extension icon anytime to open settings and the Tasks tab.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cream-200 text-nearBlack text-sm font-medium flex items-center justify-center">
+              2
+            </div>
+            <div>
               <p className="text-body-lg font-serif text-nearBlack mb-2">Open a Flow Club session</p>
               <p className="text-body text-muted">
                 Go to <a href="https://in.flow.club" target="_blank" rel="noopener noreferrer" className="text-matcha-accent hover:underline">in.flow.club</a> and join or start a session. Make sure the timer is running.
@@ -163,7 +175,7 @@ export default function FlowClubCompanion() {
 
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cream-200 text-nearBlack text-sm font-medium flex items-center justify-center">
-              2
+              3
             </div>
             <div>
               <p className="text-body-lg font-serif text-nearBlack mb-2">Refresh the page once</p>
@@ -178,7 +190,7 @@ export default function FlowClubCompanion() {
 
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cream-200 text-nearBlack text-sm font-medium flex items-center justify-center">
-              3
+              4
             </div>
             <div>
               <p className="text-body-lg font-serif text-nearBlack mb-2">You're done</p>
@@ -312,7 +324,7 @@ export default function FlowClubCompanion() {
           <p className="text-body-lg font-serif text-nearBlack mb-4">Quick checklist</p>
           <ul className="space-y-2 text-body text-muted">
             <li className="flex items-center gap-2">
-              <span className="text-matcha-accent">□</span> Extension is pinned to toolbar
+              <span className="text-matcha-accent">□</span> Click the puzzle icon → pin Flow Club Companion to the toolbar
             </li>
             <li className="flex items-center gap-2">
               <span className="text-matcha-accent">□</span> Flow Club page refreshed after install/settings change
@@ -395,8 +407,8 @@ export default function FlowClubCompanion() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-cream-300 text-nearBlack rounded-lg
                        hover:border-matcha-accent/30 hover:bg-white transition-all duration-200"
           >
-            Get for Firefox (Under Review)
-            <span>→</span>
+            Get for Firefox
+            <span>→</span>Download the ZIP, unzip it, then load the folder via chrome://extensions → Developer Mode → Load unpacked → select the unzipped folder.
           </a>
         </div>
         <p className="text-caption text-stone mt-4">
