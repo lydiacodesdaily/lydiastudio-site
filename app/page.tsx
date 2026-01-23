@@ -106,9 +106,9 @@ export default function Home() {
         </h2>
       </div>
 
-      {/* Project 1: JustToday - Featured */}
+      {/* Project 1: FlowMate - Featured */}
       <a
-        href="https://www.justtoday.app/"
+        href="https://flowmate.club/"
         target="_blank"
         rel="noopener noreferrer"
         className="breakout group block py-8 md:py-12"
@@ -117,8 +117,8 @@ export default function Home() {
           <div className="relative aspect-[4/3] bg-cream-100 rounded-lg overflow-hidden border border-cream-300
                           group-hover:border-matcha-accent/30 transition-colors duration-300">
             <Image
-              src="/screenshots/justtoday.png"
-              alt="JustToday interface showing energy-aware daily planning"
+              src="/screenshots/flowmate.png"
+              alt="FlowMate focus timer interface"
               fill
               className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -129,17 +129,17 @@ export default function Home() {
               Featured Project
             </p>
             <h3 className="text-headline font-serif text-nearBlack mb-4 group-hover:text-matcha-800 transition-colors">
-              JustToday
+              FlowMate
             </h3>
             <p className="text-body-lg text-muted mb-3">
-              A calm, energy-aware planning app that helps you decide what matters today, and let the rest wait.
+              A gentle focus timer using soft audio cues and configurable verbal time announcements to support time awareness.
             </p>
             <p className="text-body text-stone mb-6">
-              JustToday combines a gentle brain dump, a small “Today” focus area, flexible routines, and a quiet “Later” space so you can move through your day without pressure, streaks, or constant reminders. It adapts to your energy level and encourages progress that feels supportive, even on low-energy days.
+              FlowMate helps you stay aware of time passing without harsh alarms or interruptions. With customizable spoken time updates, ambient sounds, and flexible session lengths, it creates a calm container for focused work.
             </p>
             <span className="inline-flex items-center gap-2 text-body text-matcha-accent font-medium
                            group-hover:gap-3 transition-all duration-300">
-              Open JustToday
+              Open FlowMate
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </span>
           </div>
@@ -151,9 +151,9 @@ export default function Home() {
 
       {/* Projects Grid - Secondary */}
       <div className="breakout grid md:grid-cols-3 gap-6 md:gap-8 py-8">
-        {/* FlowMate */}
+        {/* JustToday */}
         <a
-          href="https://flowmate.club/"
+          href="https://www.justtoday.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="group block p-6 bg-white/60 rounded-lg border border-cream-300
@@ -161,25 +161,25 @@ export default function Home() {
         >
           <div className="relative aspect-[4/3] bg-cream-100 rounded overflow-hidden mb-5 border border-cream-200">
             <Image
-              src="/screenshots/flowmate.png"
-              alt="FlowMate focus timer interface"
+              src="/screenshots/justtoday.png"
+              alt="JustToday interface showing energy-aware daily planning"
               fill
               className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
           <h3 className="text-body-lg font-serif text-nearBlack mb-2 group-hover:text-matcha-800 transition-colors">
-            FlowMate
+            JustToday
           </h3>
           <p className="text-caption text-muted mb-3 line-clamp-3">
-            A gentle focus timer using soft audio cues and configurable verbal time announcements to support time awareness.
+            A calm, energy-aware planning app that helps you decide what matters today, and let the rest wait.
           </p>
           <p className="text-caption text-stone italic mb-4">
-            1,000+ organic visitors
+            In development — still finding the right workflow. Welcome to try it out, feedback appreciated!
           </p>
           <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
                          group-hover:gap-2 transition-all duration-300">
-            Visit site <span>→</span>
+            Try it out <span>→</span>
           </span>
         </a>
 
