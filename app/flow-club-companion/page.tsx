@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import NewsletterCtaBand from '@/components/NewsletterCtaBand';
 
 export default function FlowClubCompanion() {
   const [isVisible, setIsVisible] = useState(false);
@@ -415,6 +416,9 @@ export default function FlowClubCompanion() {
           Chrome users: Download the ZIP, unzip it, then load the folder via chrome://extensions → Developer Mode → Load unpacked → select the unzipped folder.
         </p>
       </section>
+
+      {/* Newsletter CTA */}
+      <NewsletterCtaBand />
 
       {/* Footer */}
       <footer className="pt-12 md:pt-16 pb-8 border-t border-cream-300">

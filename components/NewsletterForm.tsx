@@ -35,7 +35,7 @@ export default function NewsletterForm() {
   };
 
   return (
-    <section className="py-16 md:py-20">
+    <section id="newsletter" className="py-16 md:py-20 scroll-mt-8">
       <div className="max-w-md">
         <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-4">
           Newsletter
