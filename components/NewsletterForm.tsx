@@ -37,10 +37,10 @@ export default function NewsletterForm() {
   return (
     <section id="newsletter" className="py-16 md:py-20 scroll-mt-8">
       <div className="max-w-md">
-        <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-4">
+        <p className="text-overline uppercase text-accent tracking-widest mb-4">
           Newsletter
         </p>
-        <h2 className="text-headline font-serif text-nearBlack mb-3">
+        <h2 className="text-headline text-nearBlack mb-3">
           Get occasional notes
         </h2>
         <p className="text-body text-muted mb-8">
@@ -48,8 +48,8 @@ export default function NewsletterForm() {
         </p>
 
         {status === 'success' ? (
-          <div className="p-4 bg-matcha-tint rounded-lg border border-matcha-200">
-            <p className="text-body text-matcha-700">{message}</p>
+          <div className="p-4 bg-accent-light rounded-xl border border-accent/20">
+            <p className="text-body text-accent-hover">{message}</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -66,20 +66,20 @@ export default function NewsletterForm() {
                 placeholder="Your email"
                 required
                 disabled={status === 'loading'}
-                className="w-full px-4 py-3 bg-white border border-cream-300 rounded-lg
+                className="w-full px-4 py-3 bg-background border border-border rounded-xl
                            text-body text-nearBlack placeholder:text-stone
-                           focus:outline-none focus:border-matcha-accent focus:ring-1 focus:ring-matcha-accent/20
+                           focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10
                            disabled:opacity-60 disabled:cursor-not-allowed
-                           transition-colors duration-200"
+                           transition-all duration-200"
               />
             </div>
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full sm:w-auto px-6 py-3 bg-matcha-accent text-white font-medium rounded-full
-                         hover:bg-matcha-700 focus:outline-none focus:ring-2 focus:ring-matcha-accent focus:ring-offset-2 focus:ring-offset-cream-100
+              className="w-full sm:w-auto px-6 py-3 bg-accent text-white font-medium rounded-xl
+                         hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background
                          disabled:opacity-60 disabled:cursor-not-allowed
-                         transition-colors duration-200"
+                         transition-all duration-200"
             >
               {status === 'loading' ? 'Subscribing...' : 'Get updates'}
             </button>

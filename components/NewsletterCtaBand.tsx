@@ -32,13 +32,13 @@ export default function NewsletterCtaBand() {
 
   return (
     <aside className="py-10">
-      <div className="p-5 bg-cream-50 rounded-lg border border-cream-200">
+      <div className="p-5 bg-surface rounded-xl border border-border">
         <p className="text-body text-nearBlack mb-3">
           Occasional notes on calm tools. No spam.
         </p>
 
         {status === 'success' ? (
-          <p className="text-body text-matcha-700">
+          <p className="text-body text-accent">
             Check your email to confirm.
           </p>
         ) : (
@@ -52,16 +52,16 @@ export default function NewsletterCtaBand() {
               placeholder="Your email"
               required
               disabled={status === 'loading'}
-              className="flex-1 px-3 py-2 bg-white border border-cream-300 rounded-lg
+              className="flex-1 px-3 py-2 bg-background border border-border rounded-lg
                          text-body text-nearBlack placeholder:text-stone
-                         focus:outline-none focus:border-matcha-accent focus:ring-1 focus:ring-matcha-accent/20
-                         disabled:opacity-60 transition-colors"
+                         focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10
+                         disabled:opacity-60 transition-all duration-200"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-4 py-2 bg-matcha-accent text-white text-body font-medium rounded-lg
-                         hover:bg-matcha-700 disabled:opacity-60 transition-colors"
+              className="px-4 py-2 bg-accent text-white text-body font-medium rounded-lg
+                         hover:bg-accent-hover disabled:opacity-60 transition-all duration-200"
             >
               {status === 'loading' ? '...' : 'Subscribe'}
             </button>

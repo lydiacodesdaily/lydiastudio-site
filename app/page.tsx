@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import NewsletterForm from '@/components/NewsletterForm';
-import FloatingLeaves from '@/components/FloatingLeaves';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,74 +14,140 @@ export default function Home() {
   return (
     <main className="editorial-grid min-h-screen pb-20">
       {/* Hero Section */}
-      <header className={`relative pt-20 md:pt-32 pb-16 md:pb-24 opacity-0 ${isVisible ? 'animate-fade-up' : ''}`}>
-        <FloatingLeaves />
-        <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-6">
+      <header className={`relative pt-24 md:pt-40 pb-20 md:pb-28 opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
+        <p className="text-overline uppercase text-accent tracking-widest mb-6">
           Lydia Studio
         </p>
-        <h1 className="text-display font-serif text-nearBlack mb-6 max-w-[14ch]">
-          Gentle tools for focus & time awareness
+        <h1 className="text-display text-nearBlack mb-6 max-w-[16ch] text-balance">
+          Systems that work with you
         </h1>
-        <p className="text-subhead text-muted font-light max-w-[32ch]">
-          For days when structure helps, but pressure doesn't.
+        <p className="text-subhead text-muted max-w-[48ch]">
+          Tools and research for people navigating focus, time, and energy in ways that actually fit how they work.
         </p>
       </header>
 
       {/* Divider */}
-      <div className={`editorial-hr opacity-0 ${isVisible ? 'animate-fade-up animate-delay-100' : ''}`} />
+      <div className={`editorial-hr opacity-0 ${isVisible ? 'animate-fade-in animate-delay-100' : ''}`} />
 
       {/* Philosophy Section */}
-      <section className={`py-8 opacity-0 ${isVisible ? 'animate-fade-up animate-delay-200' : ''}`}>
-        <div className="grid md:grid-cols-[1fr,2fr] gap-8 md:gap-12 items-start">
+      <section className={`py-16 md:py-20 opacity-0 ${isVisible ? 'animate-fade-in animate-delay-200' : ''}`}>
+        <div className="grid md:grid-cols-[1fr,2fr] gap-8 md:gap-16 items-start">
           <div>
-            <p className="text-caption uppercase tracking-widest text-stone mb-2">Philosophy</p>
-            <p className="text-body-lg font-serif text-nearBlack leading-relaxed">
-              Built from lived experience
+            <p className="text-overline uppercase tracking-widest text-accent mb-3">Philosophy</p>
+            <p className="text-body-lg text-nearBlack leading-relaxed font-medium">
+              Building from direct experience with what makes systems work—or fail
             </p>
           </div>
           <div className="space-y-5 text-body text-muted">
             <p>
-              I build small, human-centered tools that make time, focus, and structure feel more supportive.
+              When conventional productivity tools consistently create friction—rigid structures that don't flex, alarms that jar instead of support, planning that ignores real energy patterns—the solution isn't to push harder. It's to redesign the system.
             </p>
             <p>
-              These tools come from noticing real friction in daily work and learning: moments where task boundaries blur, time quietly slips, or constant self-monitoring becomes exhausting.
+              My approach: notice friction, research evidence-based solutions, prototype minimal systems, and share what works.
             </p>
             <p>
-              Rather than pushing productivity harder, they offer calm structure that users can lean on when it helps and ignore when it doesn't.
+              This isn't about willpower. It's about better design. Good tools account for natural variation in human attention and energy. They offer structure when it helps and flex when it doesn't.
             </p>
           </div>
         </div>
       </section>
 
       {/* Pull Quote */}
-      <blockquote className={`py-12 md:py-20 opacity-0 ${isVisible ? 'animate-fade-up animate-delay-300' : ''}`}>
-        <p className="text-headline font-serif text-nearBlack leading-snug max-w-[24ch]">
+      <blockquote className="reveal-on-scroll py-10 md:py-14">
+        <div className="accent-line mb-6" />
+        <p className="text-headline text-nearBlack leading-snug max-w-[28ch]">
           "Soft cues, limited scope, energy-aware planning, and intentional pauses."
         </p>
-        <footer className="mt-6">
-          <div className="editorial-hr mt-0 mb-4" />
-          <p className="text-caption text-stone">
-            Reducing reliance on motivation or constant vigilance
-          </p>
+        <p className="mt-6 text-caption text-stone">
+          Reducing reliance on motivation or constant vigilance
+        </p>
+      </blockquote>
+
+      {/* Testimonial */}
+      <blockquote className="reveal-on-scroll py-10 md:py-14 card p-6 md:p-8">
+        <p className="text-body-lg text-nearBlack leading-relaxed mb-4">
+          "Thank you so much for developing these tools. They are truly supportive and provide a much needed reminder to let up on the gas pedal instead of crushing it harder when things don't seem to be working."
+        </p>
+        <footer className="flex items-center gap-4">
+          <div className="flex-1 h-px bg-border" />
+          <cite className="text-caption text-stone not-italic font-medium">
+            — Christine
+          </cite>
         </footer>
       </blockquote>
 
-      {/* Video Section */}
-      <section className="breakout py-12 md:py-16">
-        <div className="grid md:grid-cols-[1fr,1.5fr] gap-8 md:gap-16 items-center">
-          <div className={`opacity-0 ${isVisible ? 'animate-fade-up animate-delay-300' : ''}`}>
-            <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-4">
-              How it works
-            </p>
-            <h2 className="text-headline font-serif text-nearBlack mb-4">
-              Design decisions in practice
-            </h2>
-            <p className="text-body text-muted mb-4">
-              This short video walks through FlowMate and Flow Club Companion, showing how they support time awareness during real work sessions.
+      {/* Divider */}
+      <div className="editorial-hr" />
+
+      {/* Why This Matters Section */}
+      <section className="reveal-on-scroll py-16 md:py-20">
+        <div className="grid md:grid-cols-[1fr,2fr] gap-8 md:gap-16 items-start">
+          <div>
+            <p className="text-overline uppercase tracking-widest text-accent mb-3">Why This Matters</p>
+            <p className="text-body-lg text-nearBlack leading-relaxed font-medium">
+              Better user understanding leads to better products
             </p>
           </div>
-          <div className={`opacity-0 ${isVisible ? 'animate-fade-up animate-delay-400' : ''}`}>
-            <div className="relative w-full bg-cream-100 rounded-lg overflow-hidden border border-cream-300"
+          <div className="space-y-5 text-body text-muted">
+            <p>
+              Building from lived experience isn't just personal—it's a research methodology that reveals friction points others miss.
+            </p>
+            <p className="font-medium text-nearBlack">What this work has taught me:</p>
+            <ul className="space-y-2.5">
+              <li className="flex gap-3">
+                <span className="text-accent mt-1.5">—</span>
+                <span>How to identify usability gaps through direct observation</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent mt-1.5">—</span>
+                <span>Rapid prototyping and iteration based on real user feedback</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent mt-1.5">—</span>
+                <span>Designing for cognitive accessibility—which benefits all users</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent mt-1.5">—</span>
+                <span>Creating flexible systems that accommodate different working styles</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent mt-1.5">—</span>
+                <span>Building tools that reduce cognitive load rather than adding to it</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* The Insight */}
+      <blockquote className="reveal-on-scroll py-10 md:py-14 border-l-2 border-accent pl-6 md:pl-8">
+        <p className="text-body-lg text-nearBlack leading-relaxed mb-2">
+          <span className="font-medium">The insight:</span> When you design for people whose needs aren't met by mainstream tools, you often create something that works better for everyone.
+        </p>
+        <p className="text-body text-muted">
+          Accessibility isn't an edge case—it's a design principle that improves products broadly.
+        </p>
+      </blockquote>
+
+      {/* Divider */}
+      <div className="editorial-hr" />
+
+      {/* Video Section */}
+      <section className="breakout py-16 md:py-20">
+        <div className="grid md:grid-cols-[1fr,1.5fr] gap-8 md:gap-16 items-center">
+          <div className="reveal-on-scroll">
+            <p className="text-overline uppercase text-accent tracking-widest mb-4">
+              How It Works
+            </p>
+            <h2 className="text-headline text-nearBlack mb-4">
+              Design decisions in practice
+            </h2>
+            <p className="text-body text-muted">
+              This video walks through FlowMate and Flow Club Companion, showing how these principles translate into real tools during actual work sessions.
+            </p>
+          </div>
+          <div className="reveal-on-scroll">
+            <div className="relative w-full bg-surface rounded-xl overflow-hidden border border-border"
                  style={{ paddingBottom: "56.25%" }}>
               <iframe
                 src="https://www.kapwing.com/e/6940b8ddb0b8990ffee7a1fe"
@@ -96,12 +161,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="editorial-hr" />
+
+      {/* Design Principles Section */}
+      <section className="reveal-on-scroll py-16 md:py-20">
+        <p className="text-overline uppercase text-accent tracking-widest mb-4">
+          Research & Approach
+        </p>
+        <h2 className="text-headline text-nearBlack mb-10">
+          Design principles I follow
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+          <div className="space-y-2">
+            <h3 className="text-body-lg text-nearBlack font-medium">Reduce cognitive overhead</h3>
+            <p className="text-body text-muted">
+              Good tools should feel effortless. If a productivity system requires constant willpower or monitoring, it's adding to the problem it claims to solve.
+            </p>
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-body-lg text-nearBlack font-medium">Design for variability</h3>
+            <p className="text-body text-muted">
+              Attention, energy, and capacity naturally fluctuate. Effective tools accommodate this rather than fighting it.
+            </p>
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-body-lg text-nearBlack font-medium">Make structure supportive, not rigid</h3>
+            <p className="text-body text-muted">
+              Structure helps—but only when users can adapt it to their current context without the system breaking.
+            </p>
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-body-lg text-nearBlack font-medium">Prioritize user agency</h3>
+            <p className="text-body text-muted">
+              The user knows their needs better than any system. Tools should offer options, not mandates.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="editorial-hr" />
+
       {/* Projects Header */}
-      <div className="pt-16 md:pt-24 pb-8">
-        <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-4">
+      <div className="pt-20 md:pt-28 pb-10">
+        <p className="text-overline uppercase text-accent tracking-widest mb-4">
           Projects
         </p>
-        <h2 className="text-headline font-serif text-nearBlack">
+        <h2 className="text-headline text-nearBlack">
           Tools I've built
         </h2>
       </div>
@@ -111,33 +218,39 @@ export default function Home() {
         href="https://flowmate.club/"
         target="_blank"
         rel="noopener noreferrer"
-        className="breakout group block py-8 md:py-12"
+        className="breakout group block py-10 md:py-14"
       >
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="relative aspect-[4/3] bg-cream-100 rounded-lg overflow-hidden border border-cream-300
-                          group-hover:border-matcha-accent/30 transition-colors duration-300">
+          <div className="relative aspect-[4/3] bg-surface rounded-xl overflow-hidden border border-border
+                          group-hover:border-accent/30 transition-all duration-300 ease-out-expo group-hover:shadow-card-hover">
             <Image
               src="/screenshots/flowmate.png"
               alt="FlowMate focus timer interface"
               fill
-              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out-expo"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <div>
-            <p className="text-caption text-matcha-accent mb-2 group-hover:text-matcha-700 transition-colors">
+            <p className="text-caption text-accent mb-2 group-hover:text-accent-hover transition-colors">
               Featured Project
             </p>
-            <h3 className="text-headline font-serif text-nearBlack mb-4 group-hover:text-matcha-800 transition-colors">
+            <h3 className="text-headline text-nearBlack mb-4 group-hover:text-accent transition-colors">
               FlowMate
             </h3>
             <p className="text-body-lg text-muted mb-3">
-              A gentle focus timer using soft audio cues and configurable verbal time announcements to support time awareness.
+              Gentle focus timer with audio cues for non-intrusive time awareness.
             </p>
             <p className="text-body text-stone mb-6">
-              FlowMate helps you stay aware of time passing without harsh alarms or interruptions. With customizable spoken time updates, ambient sounds, and flexible session lengths, it creates a calm container for focused work.
+              Customizable spoken time updates, ambient sounds, and flexible session lengths create supportive structure for focused work. Built on research showing soft audio cues support time awareness without the stress response triggered by sudden alarms.
             </p>
-            <span className="inline-flex items-center gap-2 text-body text-matcha-accent font-medium
+            <ul className="text-caption text-muted space-y-1.5 mb-8">
+              <li className="flex gap-2"><span className="text-accent">•</span> Configurable verbal time announcements</li>
+              <li className="flex gap-2"><span className="text-accent">•</span> Ambient background sounds</li>
+              <li className="flex gap-2"><span className="text-accent">•</span> Flexible session lengths</li>
+              <li className="flex gap-2"><span className="text-accent">•</span> No harsh interruptions</li>
+            </ul>
+            <span className="inline-flex items-center gap-2 text-body text-accent font-medium
                            group-hover:gap-3 transition-all duration-300">
               Open FlowMate
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -149,36 +262,35 @@ export default function Home() {
       {/* Divider */}
       <div className="editorial-hr" />
 
-      {/* Projects Grid - Secondary */}
-      <div className="breakout grid md:grid-cols-3 gap-6 md:gap-8 py-8">
+      {/* Projects Grid - Bento Layout */}
+      <div className="breakout grid md:grid-cols-3 gap-6 md:gap-6 py-10">
         {/* JustToday */}
         <a
           href="https://www.justtoday.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group block p-6 bg-white/60 rounded-lg border border-cream-300
-                     hover:border-matcha-accent/30 hover:bg-white transition-all duration-300"
+          className="group card block p-5"
         >
-          <div className="relative aspect-[4/3] bg-cream-100 rounded overflow-hidden mb-5 border border-cream-200">
+          <div className="relative aspect-[4/3] bg-background rounded-lg overflow-hidden mb-5 border border-border">
             <Image
               src="/screenshots/justtoday.png"
               alt="JustToday interface showing energy-aware daily planning"
               fill
-              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out-expo"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
-          <h3 className="text-body-lg font-serif text-nearBlack mb-2 group-hover:text-matcha-800 transition-colors">
+          <h3 className="text-body-lg text-nearBlack mb-2 font-medium group-hover:text-accent transition-colors">
             JustToday
           </h3>
           <p className="text-caption text-muted mb-3 line-clamp-3">
-            A calm, energy-aware planning app that helps you decide what matters today, and let the rest wait.
+            Energy-aware planning tool for realistic daily prioritization. Helps identify what matters today and consciously defer the rest.
           </p>
           <p className="text-caption text-stone italic mb-4">
-            In development — still finding the right workflow. Welcome to try it out, feedback appreciated!
+            In development — feedback welcome
           </p>
-          <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
-                         group-hover:gap-2 transition-all duration-300">
+          <span className="inline-flex items-center gap-1.5 text-caption text-accent font-medium
+                         group-hover:gap-2.5 transition-all duration-300">
             Try it out <span>→</span>
           </span>
         </a>
@@ -186,29 +298,28 @@ export default function Home() {
         {/* Flow Club Companion */}
         <a
           href="/flow-club-companion"
-          className="group block p-6 bg-white/60 rounded-lg border border-cream-300
-                     hover:border-matcha-accent/30 hover:bg-white transition-all duration-300"
+          className="group card block p-5"
         >
-          <div className="relative aspect-[4/3] bg-cream-100 rounded overflow-hidden mb-5 border border-cream-200">
+          <div className="relative aspect-[4/3] bg-background rounded-lg overflow-hidden mb-5 border border-border">
             <Image
               src="/screenshots/flowclub-companion.png"
               alt="Flow Club Companion browser extension interface"
               fill
-              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out-expo"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
-          <h3 className="text-body-lg font-serif text-nearBlack mb-2 group-hover:text-matcha-800 transition-colors">
+          <h3 className="text-body-lg text-nearBlack mb-2 font-medium group-hover:text-accent transition-colors">
             Flow Club Companion
           </h3>
           <p className="text-caption text-muted mb-3 line-clamp-3">
-            Browser extension for Chrome and Firefox that adds time-aware audio cues and reusable task lists to Flow Club sessions.
+            Browser extension enhancing virtual body doubling sessions with time-aware audio cues and reusable task lists.
           </p>
           <p className="text-caption text-stone italic mb-4">
             Featured by Flow Club
           </p>
-          <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
-                         group-hover:gap-2 transition-all duration-300">
+          <span className="inline-flex items-center gap-1.5 text-caption text-accent font-medium
+                         group-hover:gap-2.5 transition-all duration-300">
             Getting started <span>→</span>
           </span>
         </a>
@@ -218,66 +329,73 @@ export default function Home() {
           href="https://resources.lydiastud.io/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group block p-6 bg-white/60 rounded-lg border border-cream-300
-                     hover:border-matcha-accent/30 hover:bg-white transition-all duration-300"
+          className="group card block p-5"
         >
-          <div className="relative aspect-[4/3] bg-cream-100 rounded overflow-hidden mb-5 border border-cream-200">
+          <div className="relative aspect-[4/3] bg-background rounded-lg overflow-hidden mb-5 border border-border">
             <Image
               src="/screenshots/resources.png"
               alt="Resources Library interface"
               fill
-              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+              className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out-expo"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
-          <h3 className="text-body-lg font-serif text-nearBlack mb-2 group-hover:text-matcha-800 transition-colors">
+          <h3 className="text-body-lg text-nearBlack mb-2 font-medium group-hover:text-accent transition-colors">
             Resources Library
           </h3>
           <p className="text-caption text-muted mb-3 line-clamp-3">
-            A curated library of tools, practices, and external supports that help when focus is hard.
+            Curated collection of evidence-based tools and practices organized by need: focus support, energy management, task initiation.
           </p>
           <p className="text-caption text-stone italic mb-4">
             Community-sourced recommendations
           </p>
-          <span className="inline-flex items-center gap-1.5 text-caption text-matcha-accent font-medium
-                         group-hover:gap-2 transition-all duration-300">
+          <span className="inline-flex items-center gap-1.5 text-caption text-accent font-medium
+                         group-hover:gap-2.5 transition-all duration-300">
             Explore library <span>→</span>
           </span>
         </a>
       </div>
 
-      {/* Testimonials */}
-      <section className="py-12 md:py-16">
-        <p className="text-overline uppercase text-matcha-accent font-medium tracking-widest mb-8">
-          Kind Words
-        </p>
-        <blockquote className="bg-white/60 rounded-lg border border-cream-300 p-6 md:p-8">
-          <p className="text-body-lg font-serif text-nearBlack leading-relaxed mb-4">
-            "Thank you so much for developing these tools. They are truly supportive and provide a much needed reminder to let up on the gas pedal instead of crushing it harder when things don't seem to be working."
-          </p>
-          <footer className="flex items-center gap-3">
-            <div className="editorial-hr flex-1 mt-0 mb-0" />
-            <cite className="text-caption text-stone not-italic">
-              Christine, Flow Club
-            </cite>
-          </footer>
-        </blockquote>
+      {/* Divider */}
+      <div className="editorial-hr" />
+
+      {/* About Section */}
+      <section className="reveal-on-scroll py-16 md:py-20">
+        <div className="grid md:grid-cols-[1fr,2fr] gap-8 md:gap-16 items-start">
+          <div>
+            <p className="text-overline uppercase tracking-widest text-accent mb-3">About</p>
+            <p className="text-body-lg text-nearBlack leading-relaxed font-medium">
+              Building better systems
+            </p>
+          </div>
+          <div className="space-y-5 text-body text-muted">
+            <p>
+              These tools emerge from years of researching what actually helps when mainstream productivity advice falls short. The work combines direct user research, evidence-based design drawing from cognitive psychology and accessibility principles, rapid iteration, and community feedback.
+            </p>
+            <p>
+              If you've experienced the gap between how productivity tools expect you to work and how you actually function best, you understand the problem this work addresses.
+            </p>
+            <p className="text-nearBlack font-medium">
+              The solution isn't changing yourself to fit rigid systems. It's building better systems.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Newsletter */}
-      <div className={`opacity-0 ${isVisible ? 'animate-fade-up animate-delay-400' : ''}`}>
+      <div className="reveal-on-scroll">
         <NewsletterForm />
       </div>
 
       {/* Footer */}
-      <footer className="pt-12 md:pt-16 pb-8 border-t border-cream-300">
+      <footer className="pt-16 md:pt-20 pb-8 border-t border-border">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
-            <p className="text-body-lg font-serif text-nearBlack mb-1">
+            <p className="text-body-lg text-nearBlack mb-1 font-medium">
               Lydia Studio
             </p>
             <p className="text-caption text-stone">
-              Building calm tools, thoughtfully.
+              Systems that work with you, not against you.
             </p>
           </div>
           <nav className="flex gap-6">
@@ -285,7 +403,7 @@ export default function Home() {
               href="https://tally.so/r/Y50Qb5"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-caption text-muted hover:text-matcha-accent transition-colors duration-200"
+              className="text-caption text-muted hover:text-accent transition-colors duration-200"
             >
               Contact
             </a>
@@ -293,7 +411,7 @@ export default function Home() {
               href="https://github.com/lydiacodesdaily/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-caption text-muted hover:text-matcha-accent transition-colors duration-200"
+              className="text-caption text-muted hover:text-accent transition-colors duration-200"
             >
               GitHub
             </a>
@@ -301,7 +419,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/lydiakwag/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-caption text-muted hover:text-matcha-accent transition-colors duration-200"
+              className="text-caption text-muted hover:text-accent transition-colors duration-200"
             >
               LinkedIn
             </a>
