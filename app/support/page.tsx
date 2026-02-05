@@ -241,9 +241,12 @@ export default function SupportPage() {
       <footer className="mt-20 pt-8 border-t border-border">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-caption text-stone">
           <p>&copy; {new Date().getFullYear()} Lydia Studio</p>
-          <nav className="flex gap-6">
+          <nav className="flex flex-wrap gap-6">
             <Link href="/" className="hover:text-accent transition-colors">
               Home
+            </Link>
+            <Link href="/privacy" className="hover:text-accent transition-colors">
+              Privacy
             </Link>
             <a
               href="https://github.com/lydiastudio"

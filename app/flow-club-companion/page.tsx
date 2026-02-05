@@ -431,12 +431,18 @@ export default function FlowClubCompanion() {
               Building calm tools, thoughtfully.
             </p>
           </div>
-          <nav className="flex gap-6">
+          <nav className="flex flex-wrap gap-6">
             <Link
               href="/"
               className="text-caption text-muted hover:text-accent transition-colors duration-200"
             >
               Home
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-caption text-muted hover:text-accent transition-colors duration-200"
+            >
+              Privacy
             </Link>
             <a
               href="https://tally.so/r/Y50Qb5"

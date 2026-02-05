@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import NewsletterForm from '@/components/NewsletterForm';
 
 export default function Home() {
@@ -398,7 +399,13 @@ export default function Home() {
               Systems that work with you, not against you.
             </p>
           </div>
-          <nav className="flex gap-6">
+          <nav className="flex flex-wrap gap-6">
+            <Link
+              href="/privacy"
+              className="text-caption text-muted hover:text-accent transition-colors duration-200"
+            >
+              Privacy
+            </Link>
             <a
               href="https://tally.so/r/Y50Qb5"
               target="_blank"
