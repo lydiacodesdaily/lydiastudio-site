@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { motion } from 'framer-motion';
 
 export default function NewsletterCtaBand() {
   const [email, setEmail] = useState('');
@@ -31,37 +32,42 @@ export default function NewsletterCtaBand() {
   };
 
   return (
-    <aside className="py-10">
-      <div className="p-5 bg-surface rounded-xl border border-border">
-        <p className="text-body text-nearBlack mb-3">
+    <motion.aside
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="py-10"
+    >
+      <div className="p-6 bg-surface rounded-2xl border border-border">
+        <p className="text-body text-primary mb-4">
           Occasional notes on calm tools. No spam.
         </p>
 
         {status === 'success' ? (
-          <p className="text-body text-accent">
+          <p className="text-body text-secondary">
             Check your email to confirm.
           </p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
             <label htmlFor="cta-email" className="sr-only">Email address</label>
             <input
               type="email"
               id="cta-email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email"
+              placeholder="you@email.com"
               required
               disabled={status === 'loading'}
-              className="flex-1 px-3 py-2 bg-background border border-border rounded-lg
-                         text-body text-nearBlack placeholder:text-stone
-                         focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10
+              className="flex-1 px-4 py-2.5 bg-background border border-border rounded-full
+                         text-body text-primary placeholder:text-tertiary
+                         focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10
                          disabled:opacity-60 transition-all duration-200"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-4 py-2 bg-accent text-white text-body font-medium rounded-lg
-                         hover:bg-accent-hover disabled:opacity-60 transition-all duration-200"
+              className="btn-primary py-2.5"
             >
               {status === 'loading' ? '...' : 'Subscribe'}
             </button>
@@ -69,9 +75,9 @@ export default function NewsletterCtaBand() {
         )}
 
         {status === 'error' && (
-          <p className="text-caption text-red-600 mt-2">Something went wrong. Try again?</p>
+          <p className="text-small text-red-600 mt-3">Something went wrong. Try again?</p>
         )}
       </div>
-    </aside>
+    </motion.aside>
   );
 }

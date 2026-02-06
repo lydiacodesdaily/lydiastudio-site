@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { motion } from 'framer-motion';
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
@@ -35,60 +36,66 @@ export default function NewsletterForm() {
   };
 
   return (
-    <section id="newsletter" className="py-16 md:py-20 scroll-mt-8">
-      <div className="max-w-md">
-        <p className="text-overline uppercase text-accent tracking-widest mb-4">
-          Newsletter
-        </p>
-        <h2 className="text-headline text-nearBlack mb-3">
-          Get occasional notes
-        </h2>
-        <p className="text-body text-muted mb-8">
-          Calm productivity tools and energy-aware design. No spam, unsubscribe anytime.
-        </p>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+      className="max-w-lg"
+    >
+      <h2 className="text-heading-lg text-primary mb-3">Stay updated</h2>
+      <p className="text-body text-secondary mb-8">
+        Occasional notes on calm productivity tools and energy-aware design.
+        No spam, unsubscribe anytime.
+      </p>
 
-        {status === 'success' ? (
-          <div className="p-4 bg-accent-light rounded-xl border border-accent/20">
-            <p className="text-body text-accent-hover">{message}</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="sr-only">
-                Email address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email_address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
-                required
-                disabled={status === 'loading'}
-                className="w-full px-4 py-3 bg-background border border-border rounded-xl
-                           text-body text-nearBlack placeholder:text-stone
-                           focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10
-                           disabled:opacity-60 disabled:cursor-not-allowed
-                           transition-all duration-200"
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full sm:w-auto px-6 py-3 bg-accent text-white font-medium rounded-xl
-                         hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background
-                         disabled:opacity-60 disabled:cursor-not-allowed
-                         transition-all duration-200"
-            >
-              {status === 'loading' ? 'Subscribing...' : 'Get updates'}
-            </button>
-            {status === 'error' && (
-              <p className="text-caption text-red-600">{message}</p>
-            )}
-          </form>
-        )}
-      </div>
-    </section>
+      {status === 'success' ? (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="p-5 bg-accent-light rounded-2xl border border-border"
+        >
+          <p className="text-body text-primary">{message}</p>
+        </motion.div>
+      ) : (
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+          <label htmlFor="email" className="sr-only">
+            Email address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email_address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@email.com"
+            required
+            disabled={status === 'loading'}
+            className="flex-1 px-5 py-3.5 bg-surface border border-border rounded-full
+                       text-body text-primary placeholder:text-tertiary
+                       focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10
+                       disabled:opacity-60 disabled:cursor-not-allowed
+                       transition-all duration-200"
+          />
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="btn-primary whitespace-nowrap"
+          >
+            {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          </button>
+        </form>
+      )}
+
+      {status === 'error' && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="mt-3 text-small text-red-600"
+        >
+          {message}
+        </motion.p>
+      )}
+    </motion.div>
   );
 }
