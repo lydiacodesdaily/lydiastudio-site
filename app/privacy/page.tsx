@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     description: "Privacy policy for Lydia Studio products.",
     type: "website",
   },
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

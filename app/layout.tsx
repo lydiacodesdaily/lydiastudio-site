@@ -16,6 +16,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lydiastud.io"),
   title: "Lydia Studio",
   description: "Building systems that work with you, not against you. Tools and research for focus, time, and energy.",
   openGraph: {
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 

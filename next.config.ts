@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/privacy/flow-club-companion",
+        destination: "/privacy#flow-club-companion",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
