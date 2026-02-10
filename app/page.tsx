@@ -52,8 +52,7 @@ export default function Home() {
                 className="text-body-lg text-secondary max-w-xl mb-10"
               >
                 Focus and productivity tools designed for how you actually work.
-                Built with care for the easily distracted.
-              </motion.p>
+                Built with care for sensory comfort and natural energy patterns.              </motion.p>
 
               <motion.div
                 variants={fadeUp}
