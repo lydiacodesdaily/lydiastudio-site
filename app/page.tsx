@@ -173,33 +173,35 @@ export default function Home() {
               </motion.div>
 
               {/* JustToday */}
-              <motion.a
-                href="https://www.justtoday.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="card p-5 flex flex-col group"
+                className="card p-5 flex flex-col"
               >
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-accent-light">
                   <Image
                     src="/screenshots/justtoday.png"
-                    alt="JustToday interface"
+                    alt="JustToday preview"
                     fill
-                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="text-heading text-primary mb-2 group-hover:text-secondary transition-colors">
+                <h3 className="text-heading text-primary mb-2">
                   JustToday
                 </h3>
                 <p className="text-small text-secondary mb-4 flex-grow">
                   Energy-aware planning tool for realistic daily prioritization.
                 </p>
-                <span className="text-xs font-medium text-tertiary">In development</span>
-              </motion.a>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-medium text-tertiary">Coming soon</span>
+                  <a href="#newsletter" className="text-xs font-medium text-secondary hover:text-primary transition-colors">
+                    Get notified &rarr;
+                  </a>
+                </div>
+              </motion.div>
 
               {/* Resources Library */}
               <motion.a
