@@ -307,22 +307,6 @@ export default function Home() {
                 >
                   Contact
                 </a>
-                <a
-                  href="https://github.com/lydiacodesdaily/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-small text-secondary hover:text-primary transition-colors"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/lydiakwag/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-small text-secondary hover:text-primary transition-colors"
-                >
-                  LinkedIn
-                </a>
               </nav>
             </div>
           </div>

@@ -248,22 +248,6 @@ export default function SupportPage() {
             <Link href="/privacy" className="hover:text-accent transition-colors">
               Privacy
             </Link>
-            <a
-              href="https://github.com/lydiastudio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/lydiayc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-            >
-              LinkedIn
-            </a>
           </nav>
         </div>
       </footer>
