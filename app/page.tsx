@@ -173,35 +173,38 @@ export default function Home() {
               </motion.div>
 
               {/* JustToday */}
-              <motion.div
+              <motion.a
+                href="https://www.justtoday.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="card p-5 flex flex-col"
+                className="card p-5 flex flex-col group"
               >
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-accent-light">
                   <Image
                     src="/screenshots/justtoday.png"
                     alt="JustToday preview"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="text-heading text-primary mb-2">
+                <h3 className="text-heading text-primary mb-2 group-hover:text-secondary transition-colors">
                   JustToday
                 </h3>
                 <p className="text-small text-secondary mb-4 flex-grow">
                   Energy-aware planning tool for realistic daily prioritization.
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-tertiary">Coming soon</span>
-                  <a href="#newsletter" className="text-xs font-medium text-secondary hover:text-primary transition-colors">
-                    Get notified &rarr;
-                  </a>
-                </div>
-              </motion.div>
+                <span className="link-arrow w-fit">
+                  Open JustToday
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </motion.a>
 
               {/* Resources Library */}
               <motion.a
