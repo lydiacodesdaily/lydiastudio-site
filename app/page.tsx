@@ -51,8 +51,9 @@ export default function Home() {
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
                 className="text-body-lg text-secondary max-w-xl mb-10"
               >
-                Focus and productivity tools designed for how you actually work.
-                Built with care for sensory comfort and natural energy patterns.              </motion.p>
+                Software tools for focus, learning, and daily workflows.
+                Designed around real energy patterns and how people actually think and work.      
+              </motion.p>
 
               <motion.div
                 variants={fadeUp}
@@ -66,6 +67,39 @@ export default function Home() {
                   Stay updated
                 </a>
               </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Pillars Strip */}
+        <section className="border-t border-border">
+          <div className="container-main">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border py-12 md:py-16"
+            >
+              {[
+                {
+                  label: 'Energy-aware',
+                  description: 'Designed around how you actually feel, not how you wish you felt.',
+                },
+                {
+                  label: 'Non-intrusive',
+                  description: 'Gentle cues that support without derailing your focus.',
+                },
+                {
+                  label: 'Evidence-based',
+                  description: 'Grounded in research and thousands of hours of real user feedback.',
+                },
+              ].map((pillar, i) => (
+                <div key={i} className="md:px-10 first:md:pl-0 last:md:pr-0 py-6 md:py-0">
+                  <p className="text-body font-medium text-primary mb-1">{pillar.label}</p>
+                  <p className="text-small text-secondary">{pillar.description}</p>
+                </div>
+              ))}
             </motion.div>
           </div>
         </section>
@@ -88,15 +122,13 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
 
               {/* FlowMate - Featured (spans 2 cols) */}
-              <motion.a
-                href="https://flowmate.club/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5 }}
-                className="card-featured md:col-span-2 p-6 md:p-8 group cursor-pointer"
+                className="card-featured md:col-span-2 lg:col-span-3 p-6 md:p-8 group cursor-pointer"
+                onClick={() => window.open('https://flowmate.club/', '_blank', 'noopener,noreferrer')}
               >
                 <div className="flex flex-col md:flex-row gap-6 md:gap-10">
                   {/* Mobile Screenshots */}
@@ -135,15 +167,35 @@ export default function Home() {
                       Gentle focus timer with audio cues for non-intrusive time awareness.
                       Customizable spoken updates, ambient sounds, and flexible sessions.
                     </p>
-                    <span className="link-arrow w-fit">
+                    <span className="link-arrow w-fit mb-6">
                       Open FlowMate
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
+
+                    <div className="flex flex-wrap gap-3">
+                      <a href="https://play.google.com/store/apps/details?id=club.flowmate.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                      >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M3.18 23.76c.33.19.7.24 1.05.16l11.6-11.6L12 8.48 3.18 23.76zM21.4 10.26l-2.78-1.6-3.27 3.27 3.27 3.27 2.8-1.61c.8-.46.8-1.87-.02-2.33zM1.83.62C1.54.94 1.38 1.42 1.38 2.06v19.88c0 .64.16 1.12.46 1.44l.08.07 11.14-11.14v-.26L1.91.55l-.08.07zM15.63 8.02 12 4.38 1.83.62l10.17 7.4 3.63-3.63V8.02z"/>
+                        </svg>
+                        Google Play
+                      </a>
+                      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm text-tertiary cursor-default">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        App Store — Coming Soon
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </motion.a>
+              </motion.div>
 
               {/* Flow Club Companion */}
               <motion.div
