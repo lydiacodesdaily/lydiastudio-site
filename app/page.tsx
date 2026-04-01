@@ -131,28 +131,41 @@ export default function Home() {
                 onClick={() => window.open('https://flowmate.club/', '_blank', 'noopener,noreferrer')}
               >
                 <div className="flex flex-col md:flex-row gap-6 md:gap-10">
-                  {/* Mobile Screenshots */}
-                  <div className="flex justify-center gap-3 md:gap-4 flex-shrink-0">
-                    {[
-                      { src: '/screenshots/flowmate/fm_m_1.jpg', alt: 'FlowMate - Focus timer' },
-                      { src: '/screenshots/flowmate/fm_m_2.jpg', alt: 'FlowMate - Time awareness' },
-                      { src: '/screenshots/flowmate/fm_m_3.jpg', alt: 'FlowMate - Sessions' },
-                    ].map((screenshot, index) => (
-                      <div
-                        key={index}
-                        className="relative w-24 md:w-28 aspect-[9/19.5] rounded-xl overflow-hidden border border-border group-hover:border-border-hover transition-all duration-300"
-                        style={{ transform: index === 1 ? 'translateY(-8px)' : 'none' }}
-                      >
-                        <Image
-                          src={screenshot.src}
-                          alt={screenshot.alt}
-                          fill
-                          className="object-cover"
-                          sizes="112px"
-                          priority={index === 0}
-                        />
-                      </div>
-                    ))}
+                  {/* Media: Screenshots with FlowMato character badge */}
+                  <div className="relative flex-shrink-0 pb-10 pr-10">
+                    <div className="flex justify-center gap-3 md:gap-4">
+                      {[
+                        { src: '/screenshots/flowmate/fm_m_1.jpg', alt: 'FlowMate - Focus timer' },
+                        { src: '/screenshots/flowmate/fm_m_2.jpg', alt: 'FlowMate - Time awareness' },
+                        { src: '/screenshots/flowmate/fm_m_3.jpg', alt: 'FlowMate - Sessions' },
+                      ].map((screenshot, index) => (
+                        <div
+                          key={index}
+                          className="relative w-24 md:w-28 aspect-[9/19.5] rounded-xl overflow-hidden border border-border group-hover:border-border-hover transition-all duration-300"
+                          style={{ transform: index === 1 ? 'translateY(-8px)' : 'none' }}
+                        >
+                          <Image
+                            src={screenshot.src}
+                            alt={screenshot.alt}
+                            fill
+                            className="object-cover"
+                            sizes="112px"
+                            priority={index === 0}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    {/* FlowMato character — floating badge */}
+                    <div className="absolute bottom-0 right-0 w-24 h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden border-2 border-border shadow-lg group-hover:border-border-hover transition-all duration-300">
+                      <video
+                        src="/screenshots/flowmate/flowmato_growing.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
 
                   {/* Content */}
@@ -163,10 +176,22 @@ export default function Home() {
                     <h3 className="text-heading-lg text-primary mb-3 group-hover:text-secondary transition-colors">
                       FlowMate
                     </h3>
-                    <p className="text-body text-secondary mb-6 max-w-md">
+                    <p className="text-body text-secondary mb-4 max-w-md">
                       Gentle focus timer with audio cues for non-intrusive time awareness.
                       Customizable spoken updates, ambient sounds, and flexible sessions.
                     </p>
+                    <div className="flex flex-wrap gap-4 mb-6">
+                      {[
+                        { value: '1,000+', label: 'active users' },
+                        { value: '40+', label: 'voice cues' },
+                        { value: '5', label: 'audio presets' },
+                      ].map((stat) => (
+                        <div key={stat.label}>
+                          <span className="text-sm font-semibold text-primary">{stat.value}</span>
+                          <span className="text-xs text-tertiary ml-1">{stat.label}</span>
+                        </div>
+                      ))}
+                    </div>
                     <span className="link-arrow w-fit mb-6">
                       Open FlowMate
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
